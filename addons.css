@@ -1,0 +1,40 @@
+/* A collection of useful jQTouch style addons */
+/* Author: Matt Carter <m@ttcarter.com> */
+/* Source: https://github.com/hash-bang/jqtouch-addon-styles */
+
+/* Icons class - arranges icons on the screen */
+/* e.g. <ul class="scroll"><ul class="icons"><li style="background-image: url('/img/icons/news.png')"><a href="#news">News</a></li></ul> */
+.icons {
+	list-style: none;
+	background-color: transparent !important;
+	border: none !important;
+	margin: 10px auto !important;
+	display: table;
+}
+
+.icons > li {
+	display: inline-block;
+	height: 64px;
+	width: 64px;
+	background-repeat: no-repeat;
+	background-position: center 10px;
+	background-size: 48px;
+	text-align: center;
+	border-top: none !important;
+	margin: 10px;
+	overflow: visible !important;
+}
+
+.icons > li > a {
+	display: block;
+	font-size: 10pt;
+	padding-top: 68px !important;
+	border-radius: 10px;
+}
+
+.icons > li > a.active {
+	background-image: inherit !important;
+	background-repeat: inherit !important;
+	background-position: inherit !important;
+	background-size: inherit !important;
+}
