@@ -2,7 +2,7 @@
 /* Author: Matt Carter <m@ttcarter.com> */
 /* Source: https://github.com/hash-bang/jqtouch-addon-styles */
 
-/* Icons class - arranges icons on the screen */
+/* Icons class - arranges icons on the screen {{{ */
 /* e.g. <ul class="scroll"><ul class="icons"><li style="background-image: url('/img/icons/news.png')"><a href="#news">News</a></li></ul> */
 .icons {
 	list-style: none;
@@ -38,3 +38,31 @@
 	background-position: inherit !important;
 	background-size: inherit !important;
 }
+/* }}} */
+/* Articles class - Displays sidebar images and small text under regular rounded selectors {{{ */
+/* e.g. <ul class="scroll"><ul class="rounded articles"><li><a href="#article-1"><img src="/img/1.jpg">Hello World<small>Sub text</small></a></li></ul> */
+.articles {
+}
+
+.articles > li {
+	height: 64px;
+}
+
+.articles > li > a > img {
+	float: right;
+	height: 64px;
+	width: 64px;
+	border-radius: 5px;
+}
+
+.articles > li > a > small {
+	display: block !important;
+	float: none !important;
+	font-size: 10pt !important;
+	width: 100% !important;
+	text-align: left !important;
+	padding: 0 !important;
+	overflow: visible !important;
+	color: #A0A0A0 !important;
+}
+/* }}} */
