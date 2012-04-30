@@ -66,3 +66,22 @@
 	color: #A0A0A0 !important;
 }
 /* }}} */
+/* Post style - Simple text blobs with a right-floating image {{{ */
+/* e.g. <ul class="rounded"><h1>Hello World</h1><img src="/img/1.jpg"/><p>Lots of text</p><p>Lots of text</p></ul> */
+.post {
+}
+
+.post p {
+	color: black;
+	font-size: 12pt;
+	padding: 20px;
+}
+
+.post img {
+	float: right;
+	width: 150px;
+	height: 150px;
+	border-radius: 5px;
+	margin: 0 20px 10px 10px;
+}
+/* }}} */
