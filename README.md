@@ -1,3 +1,3 @@
-jQTouch-Addon-Styles
+jQTouch-Kitchen-Sink
 ====================
-A collection of useful styles for use in jQTouch.
+A collection of useful styles and scripts for use in jQTouch.
