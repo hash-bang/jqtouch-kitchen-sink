@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>jQTouch-Kitchen-Sink demo</title>
+	<link rel="stylesheet" href="../jqtouch/themes/css/apple.css" title="jQTouch">
+	<script src="../jqtouch/src/lib/jquery-1.7.min.js" type="application/x-javascript" charset="utf-8"></script>
+	<script src="../jqtouch/src/jqtouch.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../jqtouch/src/jqtouch-jquery.js" type="application/x-javascript" charset="utf-8"></script>
+	<script src="../jqtouch/extensions/jqt.themeswitcher.js" type="application/x-javascript" charset="utf-8"></script>
+	<link rel="stylesheet" href="kitchen-sink.css">
+	<script src="kitchen-sink.js"></script>
+	<script>
+		var jQT = new $.jQTouch({
+		    icon: 'jqtouch.png',
+		    icon4: 'jqtouch4.png',
+		    addGlossToIcon: false,
+		    startupScreen: 'jqt_startup.png',
+		    statusBar: 'default',
+		    fullscreen: 1,
+		    themeSelectionSelector: '#jqt #themes ul',
+		    preloadImages: []
+		});
+	</script>
+</head>
+<body>
+<div id="jqt" data-iconbase="demo/img/icons/" data-iconsuffix=".png">
+	<div class="global-navbar">
+		<ul>
+			<li data-icon="icons"><a href="#home">Home</a></li>
+			<li data-icon="articles"><a href="#articles">Articles</a></li>
+			<li data-icon="post"><a href="#post">Post</a></li>
+		</ul>
+	</div>
+	<div id="home" class="current">
+		<div class="toolbar">
+			<h1>jQTouch-Kitchen-Sink</h1>
+			<a class="button slideup" id="infoButton" href="#about">About</a>
+		</div>
+		<div class="scroll">
+			<ul class="icons">
+				<li data-icon="articles"><a href="#articles">Articles</a></li>
+				<li data-icon="post"><a href="#post">Post</a></li>
+				<li data-icon="navbar"><a href="#navbar">Navbar</a></li>
+				<li data-icon="video"><a href="#video">Video</a></li>
+				<li data-icon="gallery"><a href="#gallery">Gallery</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="articles">
+		<div class="toolbar">
+			<h1>Articles example</h1>
+			<a class="back" href="#home">Home</a>
+		</div>
+		<div class="scroll">
+			<ul class="rounded articles">
+				<li><a href="#post"><img src="demo/img/articles/1.jpg"/>Article 1<small>Lorum Lipsum Dolor</small></a></li>
+				<li><a href="#post"><img src="demo/img/articles/2.jpg"/>Article 2<small>Lorum Lipsum Dolor</small></a></li>
+				<li><a href="#post"><img src="demo/img/articles/3.jpg"/>Article 3<small>Lorum Lipsum Dolor</small></a></li>
+				<li><a href="#post"><img src="demo/img/articles/4.jpg"/>Article 4<small>Lorum Lipsum Dolor</small></a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="post">
+		<div class="toolbar">
+			<h1>Post example</h1>
+			<a class="back" href="#home">Home</a>
+		</div>
+		<div class="scroll">
+			<ul class="rounded post">
+				<h1>About us</h1>
+				<img src="demo/img/articles/1.jpg"/>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec sem metus. Nunc ornare orci sed ligula suscipit id semper turpis tincidunt. Quisque vehicula nunc at nibh feugiat tincidunt malesuada tellus molestie. Sed venenatis purus et metus accumsan euismod. Suspendisse sed massa eu tellus euismod porta. Morbi vitae elit metus. Integer tristique arcu at orci vestibulum a interdum arcu gravida. Maecenas non orci a felis placerat tempus. Duis tempor semper massa vel viverra. Etiam magna nibh, eleifend sed consectetur sit amet, sagittis et tortor. Phasellus lacinia, nulla ut aliquet cursus, felis metus egestas quam, ac dictum lorem tellus id magna. Morbi laoreet, nunc ut mollis placerat, enim lorem tempus neque, a bibendum dui erat eget justo. Maecenas et accumsan lorem. Curabitur dapibus faucibus laoreet. Nullam non sagittis enim. In quis sapien lectus, non elementum nibh.</p>
+				<p>Aliquam neque lorem, vestibulum nec consectetur vel, congue in nunc. Phasellus eleifend malesuada neque, quis placerat augue imperdiet quis. Aenean magna est, aliquam et tincidunt in, tincidunt in justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In viverra tincidunt erat eget gravida. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque eu ligula eu purus aliquet semper. Etiam ipsum dolor, aliquam vitae tincidunt vel, feugiat a nibh. Integer dolor tortor, tincidunt sed tempor vitae, vehicula sed nunc.</p>
+			</ul>
+		</div>
+	</div>
+	<div id="navbar">
+		<div class="toolbar">
+			<h1>Navbar (+Post) example</h1>
+			<a class="back" href="#home">Home</a>
+		</div>
+		<div class="navbar">
+			<ul>
+				<li data-icon="icons"><a href="#home">Home</a></li>
+			</ul>
+		</div>
+		<div class="scroll">
+			<ul class="rounded post">
+				<h1>About us</h1>
+				<img src="demo/img/icons/navbar.png"/>
+				<p>This page shows a local navbar.</p>
+				<p>A local navbar is a navigation bar that floats at the bottom of the screen and only applies to ONE page.</p>
+				<p>The rest of the site uses a global-navbar which, as the name suggests, applies everywhere EXCEPT this page.</p>
+			</ul>
+		</div>
+		<div class="scroll">
+			<ul class="rounded">
+				<li><a href="#navbar-show">Show navbar</a></li>
+				<li><a href="#navbar-hide">Hide navbar</a></li>
+				<li><a href="#navbar-keep">Keep navbar</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="navbar-show" data-navbar="show">
+		<div class="toolbar">
+			<h1>Navbar example</h1>
+			<a class="back" href="#navbar">Navbar</a>
+		</div>
+		<div class="scroll">
+			<ul class="rounded post">
+				<h1>Navbar - force show</h1>
+				<img src="demo/img/icons/navbar.png"/>
+				<p>This page forcibly displays the navbar.</p>
+				<p>Since the navbar is visible anyway, this wont have much effect.</p>
+			</ul>
+		</div>
+	</div>
+	<div id="navbar-hide" data-navbar="hide">
+		<div class="toolbar">
+			<h1>Navbar example</h1>
+			<a class="back" href="#navbar">Navbar</a>
+		</div>
+		<div class="scroll">
+			<ul class="rounded post">
+				<h1>Navbar - force hide</h1>
+				<img src="demo/img/icons/navbar.png"/>
+				<p>This page forcibly hides the navbar.</p>
+			</ul>
+		</div>
+	</div>
+	<div id="navbar-keep" data-navbar="keep">
+		<div class="toolbar">
+			<h1>Navbar example</h1>
+			<a class="back" href="#navbar">Navbar</a>
+		</div>
+		<div class="scroll">
+			<ul class="rounded post">
+				<h1>Navbar - force keep previous</h1>
+				<img src="demo/img/icons/navbar.png"/>
+				<p>This page keeps the navbar at its previous status.</p>
+				<p>Since the navbar is visible for most of this app, this wont have much effect.</p>
+			</ul>
+		</div>
+	</div>
+	<div id="gallery">
+		<div class="toolbar">
+			<h1>Gallery example</h1>
+			<a class="back" href="#home">Home</a>
+		</div>
+		<div class="scroll">
+			<ul class="picturenav">
+				<li><img src="demo/img/articles/1.jpg"/></li>
+				<li><img src="demo/img/articles/2.jpg"/></li>
+				<li><img src="demo/img/articles/3.jpg"/></li>
+				<li><img src="demo/img/articles/4.jpg"/></li>
+			</ul>
+		</div>
+	</div>
+	<div id="video">
+		<div class="toolbar">
+			<h1>Video example</h1>
+			<a class="back" href="#excercise-1">Simple push-ups</a>
+		</div>
+		<div class="scroll">
+			<ul class="video">
+				<object width="420" height="320">
+					<param name="movie" value="http://www.youtube.com/v/Eh00_rniF8E?fs=1&amp;hl=en_US" />
+					<param name="allowFullScreen" value="true" />
+					<param name="allowscriptaccess" value="always" />
+					<embed src="http://www.youtube.com/v/Eh00_rniF8E?fs=1&amp;hl=en_US" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="420" height="320" />
+				</object>
+			</ul>
+		</div>
+	</div>
+</div>
+</body>
+</html>

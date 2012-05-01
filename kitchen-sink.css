@@ -1,7 +1,23 @@
 /* A collection of useful jQTouch style addons */
 /* Author: Matt Carter <m@ttcarter.com> */
-/* Source: https://github.com/hash-bang/jqtouch-addon-styles */
+/* Source: https://github.com/hash-bang/jqtouch-kitchen-sink */
 
+/* CSS options - you may wish to tweak these {{{ */
+.navbar, .global-navbar { /* For both types of navbar... */
+	height: 64px; /* The actual height of the navbar */
+}
+.navbar-padding {
+	padding-bottom: 64px; /* How much to pad the page by to compensate for the navbar */
+}
+.navbar > ul > li, .global-navbar > ul > li {
+	background-size: 32px 32px; /* Resize the navbar icons to this */
+}
+
+.navbar > ul > li, .global-navbar > ul > li {
+	background-position: center 5px; /* The position of the icon */
+	width: 64px; /* The approximate width of the navbar icons */
+}
+/* }}} */
 /* Icons class - arranges icons on the screen {{{ */
 /* e.g. <ul class="scroll"><ul class="icons"><li style="background-image: url('/img/icons/news.png')"><a href="#news">News</a></li></ul> */
 .icons {
@@ -102,10 +118,7 @@
 /* }}} */
 /* Navbar - Simple floating bottom bar that can be applied to each page {{{ */
 /* NOTE: If you want to apply a navbar globaly check out global-navbar */
-.navbar {height: 84px;} /* The actual height of the navbar */
-.current {padding-bottom: 0px;} /* Increase document height by this amount - must equal above */
-
-.navbar {
+.navbar, .global-navbar {
 	font: 12px "Helvetica Neue", Helvetica;
 	background: black;
 	position: fixed;
@@ -114,20 +127,21 @@
 	width: 100%;
 }
 
-.navbar > ul {
+.navbar > ul, .global-navbar > ul {
 	display: table;
 	width: 100%;
 	height: 100%;
 	margin: 0 !important;
 	list-style: none;
+	background: white;
+	color: gray;
+	border: 1px solid #D9D9D9;
 }
 
-.navbar > ul > li {
+.navbar > ul > li, .global-navbar > ul > li {
 	display: table-cell;
-	width: 64px;
-	height: 50px;
+	height: 100%;
 	background-repeat: no-repeat;
-	background-position: center 10px;
 	font-weight: bold;
 	color: white;
 	vertical-align: middle;
@@ -135,16 +149,24 @@
 	line-height: 80px;
 }
 
-.navbar > ul > li > a {
-	padding-top: 30px !important;
+.navbar > ul > li > a, .global-navbar > ul > li > a {
+	padding-top: 10px !important;
 	font-size: 8pt;
+	text-decoration: none;
+	display: block;
+	color: #262626;
+	text-shadow: white 0 1px 0;
 }
 
-.navbar a.hilight {
+.navbar a.hilight, .global-navbar a.hilight {
 	border: 1px solid white;
 	background-color: #404040 !important;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 }
+/* }}} */
+/* Global-Navbar - Floating bottom bar that is applied to every page {{{ */
+/* NOTE: If you want to apply a navbar locally - just on one page - check out navbar */
+/* Actually, since the global-navbar works the same as .navbar in all instances you should really see it for reference */
 /* }}} */
