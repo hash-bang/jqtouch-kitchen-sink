@@ -37,3 +37,12 @@ In the above example the option 'navbar' is set to the corresponding value.
 
 Options:
 * __navbar__ - Specify whether the global navbar should be shown on this page. Values are: 'show', 'hide' and 'keep'. If a local navbar is present it will automatically replace the global one.
+
+
+TODO
+====
+* Proper animated layout of icons when the app rotation changes - perhaps using [Quicksand](http://razorjack.net/quicksand/)
+* Support for custom animations per page (data-animation="pop" perhaps?)
+* Embedded video support
+* Better picturenav swiping support
+* Gallery support - possibly like icons but with thumbnailing
