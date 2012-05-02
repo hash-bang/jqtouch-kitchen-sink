@@ -18,6 +18,21 @@
 	width: 64px; /* The approximate width of the navbar icons */
 }
 /* }}} */
+/* Utility CSS style classes {{{ */
+/* Center images - e.g. <img class="center" src="foo.png"/> */
+.center {
+	margin: 0 auto;
+	display: block;
+	padding: 10px;
+}
+/* Paste raw code - e.g. <div class="code">print "Hello World";</div> OR <pre>print "Hello World";</pre> */
+pre, .code {
+	font-size: 12px;
+	color: #A0A0A0;
+	white-space: pre;
+	padding: 10px;
+}
+/* }}} */
 /* Icons class - arranges icons on the screen {{{ */
 /* e.g. <ul class="scroll"><ul class="icons"><li style="background-image: url('/img/icons/news.png')"><a href="#news">News</a></li></ul> */
 .icons {
