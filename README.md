@@ -21,6 +21,7 @@ In the above example the option 'iconbase' and 'iconsuffix' options are set to t
 Options:
 * __iconbase__ - Specify a prefix or base directory of where to look for icons. Can be used with 'iconsuffix' for greater functionality.
 * __iconsuffix__ - Automatically suffix all icons with this option (e.g. '.png')
+* __iwelcome__ - Redirect the browser to this URL if the page is being viewed on an iPhone and it is not running from the desktop. This feature is useful to suggest the user installs the app onto the desktop before continuing. The kitchen-sink demo profiles an example welcome screen.
 
 
 Page level settings

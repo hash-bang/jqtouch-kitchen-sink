@@ -6,8 +6,19 @@ $(function() {
 // Global options {{{
 $.extend({kitchensink: {
 	iconbase: $('#jqt').data('iconbase'),
-	iconsuffix: $('#jqt').data('iconsuffix')
+	iconsuffix: $('#jqt').data('iconsuffix'),
+	iwelcome: $('#jqt').data('iwelcome')
 }});
+// }}}
+// Welcome screen (iWelcome) {{{
+if (
+	 $.kitchensink.iwelcome // Do the iWelcome process
+	 && navigator.platform // Understands the platform property
+	 && (navigator.platform == 'iPhone') // Says its an iPhone
+	 && (!window.navigator.standalone) // Not inside an iPhone home app - redirect to full app
+	 && (!window.localStorage.getItem('iwelcome-avoid')) // Not already overridden
+)
+	document.location = $.kitchensink.iwelcome;
 // }}}
 // Icons {{{
 $('#jqt .icons > li[data-icon]').each(function() {
