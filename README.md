@@ -2,7 +2,7 @@ jQTouch-Kitchen-Sink
 ====================
 A collection of useful styles and scripts for use in jQTouch.
 
-[Kitchen Sink Demo](demo.html)
+See the index.html page for examples.
 
 
 API reference
