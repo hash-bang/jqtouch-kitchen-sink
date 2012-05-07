@@ -24,7 +24,7 @@ if (
 // Forms - Popout {{{
 $(($.kitchensink.popout ? 'SELECT' : 'SELECT[data-popout]')).each(function(index) {
 	var i = $(this);
-	var title = 'HELLO WORLD';
+	var title = i.attr('title') || 'Select...';
 	var list = $('<div class="scroll"></div>');
 	var thispage = i.parents('#jqt > div').attr('id');
 
