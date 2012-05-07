@@ -33,6 +33,16 @@ pre, .code {
 	padding: 10px;
 }
 /* }}} */
+/* Addons to JQTouch styles {{{ */
+/* .ticked - Used to show which elements are active in a popout */
+.rounded li > a.ticked {
+	color: blue !important;
+}
+
+.rounded li > a.ticked.active {
+	color: white !important;
+}
+/* }}} */
 /* Icons class - arranges icons on the screen {{{ */
 /* e.g. <ul class="scroll"><ul class="icons"><li style="background-image: url('/img/icons/news.png')"><a href="#news">News</a></li></ul> */
 

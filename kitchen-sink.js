@@ -21,7 +21,7 @@ if (
 )
 	document.location = $.kitchensink.iwelcome;
 // }}}
-// Forms {{{
+// Forms - Popout {{{
 $(($.kitchensink.popout ? 'SELECT' : 'SELECT[data-popout]')).each(function(index) {
 	var i = $(this);
 	var title = 'HELLO WORLD';
@@ -52,15 +52,19 @@ $(($.kitchensink.popout ? 'SELECT' : 'SELECT[data-popout]')).each(function(index
 		list.append(box);
 	});
 
-	i = i.replaceWith('<a href="#popout-' + id + '">' + title + '<input type="text" id="' + id + '" value="' + i.val() + '"/></a>');
+	i.replaceWith('<a href="#popout-' + id + '">' + title + '<input type="hidden" id="' + id + '" value="' + i.val() + '"/></a>');
 	list.on('click', 'a', function() {
 		$('#jqt div#' + thispage + ' INPUT#' + id).val($(this).attr('rel'));
+		console.log('SET VAL ' + $(this).attr('rel'));
 		jQT.goBack('#' + thispage);
 	});
 
 	var page = $('<div id="popout-' + id + '"><div class="toolbar"><h1>' + title + '</h1><a class="back" href="#' + thispage + '">Back</a></div></div>');
 	page.bind('pageAnimationStart', function() {
-		console.log('DRAW');
+		var currentval = $('#jqt div#' + thispage + ' INPUT#' + id).val();
+		$(this).find('a').each(function() {
+			$(this).toggleClass('ticked', currentval == $(this).attr('rel'));
+		});
 	});
 	page.append(list);
 	$('#jqt').append(page);
