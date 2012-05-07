@@ -23,7 +23,7 @@
 	</script>
 </head>
 <body>
-<div id="jqt" data-iconbase="img/icons/" data-iconsuffix=".png" data-iwelcome="welcome/">
+<div id="jqt" data-iconbase="img/icons/" data-iconsuffix=".png" data-iwelcome="welcome/" data-popout="yes">
 	<div class="global-navbar">
 		<ul>
 			<li data-icon="icons"><a href="#home">Home</a></li>
@@ -44,6 +44,7 @@
 				<li data-icon="navbar"><a href="#navbar">Navbar</a></li>
 				<li data-icon="video"><a href="#video">Video</a></li>
 				<li data-icon="gallery"><a href="#gallery">Gallery</a></li>
+				<li data-icon="forms"><a href="#forms">Forms</a></li>
 				<li data-icon="styles"><a href="#styles">CSS Styles</a></li>
 			</ul>
 		</div>
@@ -193,6 +194,42 @@
 				</object>
 			</ul>
 		</div>
+	</div>
+	<div id="forms">
+		<div class="toolbar">
+			<h1>Form example</h1>
+			<a class="back" href="#home">Home</a>
+		</div>
+		<form class="scroll">
+			<ul class="edit rounded">
+				<li><input type="text" name="name" placeholder="Text" id="some_name" /></li>
+				<li><input type="search" name="search" placeholder="Search" id="some_name" /></li>
+				<li><input type="tel" name="phone" placeholder="Phone" id="some_name"  /></li>
+				<li><input type="number" name="zip" placeholder="Numbers" id="some_name" /></li>					
+				<li><input type="email" name="email" placeholder="Email" id="some_name" /></li>
+				<li><input type="url" name="url" placeholder="Url" id="some_name" /></li>
+				<li><textarea placeholder="Textarea" ></textarea></li>
+				<li>Sample Toggle <span class="toggle"><input type="checkbox" /></span></li>
+				<li class="arrow">
+					<select id="lol">
+						<option value ="none">None</option>
+						<optgroup label="Swedish Cars">
+							<option value ="volvo">Volvo</option>
+							<option value ="saab">Saab</option>
+						</optgroup>
+						<optgroup label="German Cars">
+							<option value ="mercedes">Mercedes</option>
+							<option value ="audi">Audi</option>
+						</optgroup>
+					</select>
+				</li>
+				<li><input type="password" name="some_name" value="iphonedelcopon" id="some_name" /></li>
+				<li><input type="checkbox" name="food" value="punch" title="Punch" /></li>
+				<li><input type="checkbox" name="food" value="pie" checked="checked" title="Pie" /></li>
+				<li><input type="radio" name="bag" value="paper" title="Paper" /></li>
+				<li><input type="radio" name="bag" value="plastic" title="Plastic" /></li>
+			</ul>
+		</form>
 	</div>
 	<div id="styles">
 		<div class="toolbar">

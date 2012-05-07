@@ -7,7 +7,8 @@ $(function() {
 $.extend({kitchensink: {
 	iconbase: $('#jqt').data('iconbase'),
 	iconsuffix: $('#jqt').data('iconsuffix'),
-	iwelcome: $('#jqt').data('iwelcome')
+	iwelcome: $('#jqt').data('iwelcome'),
+	popout: $('#jqt').data('popout')
 }});
 // }}}
 // Welcome screen (iWelcome) {{{
@@ -19,6 +20,51 @@ if (
 	 && (!window.localStorage.getItem('iwelcome-avoid')) // Not already overridden
 )
 	document.location = $.kitchensink.iwelcome;
+// }}}
+// Forms {{{
+$(($.kitchensink.popout ? 'SELECT' : 'SELECT[data-popout]')).each(function(index) {
+	var i = $(this);
+	var title = 'HELLO WORLD';
+	var list = $('<div class="scroll"></div>');
+	var thispage = i.parents('#jqt > div').attr('id');
+
+	var id;
+	if (i.attr('id')) { // Nominate an ID for this select element (ID is also used to name the popout page)
+		id = i.attr('id');
+	} else { // No id on element - make one
+		id = 'select-' + index;
+		i.attr('id', id);
+	}
+
+	if (i.children('OPTION').length) {
+		var box = $('<ul class="rounded"></ul>');
+		i.children('OPTION').each(function() {
+			box.append('<li><a rel="' + $(this).val() + '" href="#">' + $(this).text() + '</a></li>');
+		});
+		list.append(box);
+	}
+	i.find('OPTGROUP').each(function() {
+		list.append('<h1>' + $(this).attr('label') + '</h1>');
+		var box = $('<ul class="rounded"></ul>');
+		$(this).children().each(function() {
+			box.append('<li><a rel="' + $(this).val() + '" href="#">' + $(this).text() + '</a></li>');
+		});
+		list.append(box);
+	});
+
+	i = i.replaceWith('<a href="#popout-' + id + '">' + title + '<input type="text" id="' + id + '" value="' + i.val() + '"/></a>');
+	list.on('click', 'a', function() {
+		$('#jqt div#' + thispage + ' INPUT#' + id).val($(this).attr('rel'));
+		jQT.goBack('#' + thispage);
+	});
+
+	var page = $('<div id="popout-' + id + '"><div class="toolbar"><h1>' + title + '</h1><a class="back" href="#' + thispage + '">Back</a></div></div>');
+	page.bind('pageAnimationStart', function() {
+		console.log('DRAW');
+	});
+	page.append(list);
+	$('#jqt').append(page);
+});
 // }}}
 // Icons {{{
 $('#jqt .icons > li[data-icon]').each(function() {

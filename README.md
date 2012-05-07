@@ -21,6 +21,7 @@ In the above example the option 'iconbase' and 'iconsuffix' options are set to t
 Options:
 * __iconbase__ - Specify a prefix or base directory of where to look for icons. Can be used with 'iconsuffix' for greater functionality.
 * __iconsuffix__ - Automatically suffix all icons with this option (e.g. '.png')
+* __popout__ - Set all <SELECT> inputs to automaticly use a popout
 * __iwelcome__ - Redirect the browser to this URL if the page is being viewed on an iPhone and it is not running from the desktop. This feature is useful to suggest the user installs the app onto the desktop before continuing. The kitchen-sink demo profiles an example welcome screen.
 
 
@@ -38,6 +39,21 @@ In the above example the option 'navbar' is set to the corresponding value.
 
 Options:
 * __navbar__ - Specify whether the global navbar should be shown on this page. Values are: 'show', 'hide' and 'keep'. If a local navbar is present it will automatically replace the global one.
+
+
+Individual element settings
+---------------------------
+
+The following options are specified in much the same way as the global settings but effect only the individual element.
+
+	<select data-popout="yes">
+		... options / optgroups ...
+	</select>
+
+In the above example the selectbox is assigned the option 'popout'.
+
+Options:
+* __popout__ - Used on <SELECT> elements to automaticly convert the select box into a sub-page selection.
 
 
 TODO
