@@ -120,7 +120,15 @@ pre, .code {
 .post p {
 	color: black;
 	font-size: 12pt;
-	padding: 20px;
+	padding: 10px 20px;
+}
+
+.post dt {
+	padding: 2px 20px;
+}
+
+.post dt strong {
+	color: black;
 }
 
 .post img {
