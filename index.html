@@ -46,6 +46,7 @@
 				<li data-icon="gallery"><a href="#gallery">Gallery</a></li>
 				<li data-icon="forms"><a href="#forms">Forms</a></li>
 				<li data-icon="styles"><a href="#styles">CSS Styles</a></li>
+				<li data-icon="jqtouch"><a href="#jqtdemos">jQTouch demos</a></li>
 			</ul>
 		</div>
 	</div>
@@ -257,6 +258,122 @@
 				<div class="code">&lt;img src="logo.png" class="center"&gt;</div>
 			</ul>
 		</div>
+	</div>
+
+	<!-- Below this line is the regular jQTouch demo - its included for completeness -->
+	<div id="jqtdemos">
+		<div class="toolbar">
+			<h1>jQTouch Demos</h1>
+			<a class="back" href="#">Home</a>
+		</div>
+		<div class="scroll">
+			<h2>List types</h2>
+			<ul class="rounded">
+				<li class="arrow"><a href="#buttons">Buttons</a></li>
+				<li class="arrow"><a href="#forms">Forms</a></li>
+			</ul>
+			<h2>UI Elements</h2>
+			<ul class="rounded">
+				<li class="arrow"><a href="#edge">Edge to Edge list</a></li>
+				<li class="arrow"><a href="#plastic">Plastic list</a></li>
+				<li class="arrow"><a href="#metal">Metal list</a></li>
+			</ul>
+			<ul class="rounded">
+				<li class="arrow"><a href="#animations">Animations</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="edge">
+		<div class="toolbar">
+			<h1>Edge to Edge</h1>
+			<a href="#" class="back">Back</a>
+		</div>
+		<ul class="edgetoedge scroll">
+			<li class="sep">F</li>
+			<li><a href="#">Flintstone, <em>Fred</em> <small>Label</small></a></li>
+			<li><a href="#">Flintstone, <em>Pebble</em> <small class="counter">42</small></a></li>
+			<li><a href="#">Flintstone, <em>Wilma</em></a></li>
+			<li class="sep">J</li>
+			<li class="arrow"><a href="#">Jetson, <em>Elroy</em> <small>Label</small></a></li>
+			<li class="arrow"><a href="#">Jetson, <em>George</em> <small class="counter">42</small></a></li>
+			<li class="arrow"><a href="#">Jetson, <em>Jane</em></a></li>
+			<li class="arrow"><a href="#">Jetson, <em>Judy</em></a></li>
+			<li class="sep">R</li>
+			<li class="forward"><a href="#">Rubble, <em>Bambam</em> <small>Label</small></a></li>
+			<li class="forward"><a href="#">Rubble, <em>Barney</em> <small class="counter">42</small></a></li>
+			<li class="forward"><a href="#">Rubble, <em>Betty</em></a></li>
+		</ul>
+	</div>
+	<div id="plastic">
+		<div class="toolbar">
+			<h1>Plastic Lists</h1>
+			<a href="#" class="back">Back</a>
+		</div>
+		<ul class="plastic scroll">
+			<li class="arrow"><a href="#">Simple list <small>Label</small></a></li>
+			<li class="arrow"><a href="#">Contact list <small class="counter">42</small></a></li>
+			<li class="forward"><a href="#">Content List</a></li>
+			<li><a href="#">Metal list</a></li>
+		</ul>
+	</div>
+	<div id="metal">
+		<div class="toolbar">
+			<h1>Metal Lists</h1>
+			<a href="#" class="back">Back</a>
+		</div>
+		<ul class="metal scroll">
+			<li class="arrow"><a href="#"><small>AM</small> 9:40 <em>Buenos Aires</em></a></li>
+			<li class="arrow"><a href="#"><small>PM</small> 19:40 <em>Singapur</em></a></li>
+			<li class="arrow"><a href="#"><small>PM</small> 22:40 <em>Japan</em></a></li>
+			<li class="arrow"><a href="#"><small>PM</small> 11:40 <em>New York</em></a></li>
+			<li class="arrow"><a href="#"><small>PM</small> 9:40 <em>Ontario</em></a></li>
+		</ul>
+	</div>
+	<div id="buttons">
+		<div class="toolbar">
+			<h1>Buttons!</h1>
+			<a href="#" class="back">Home</a>
+		</div>
+		<div style="margin-top: 10px;" class="scroll">
+			<a href="#" class="whiteButton">White</a>
+			<br>
+			<a href="#" class="grayButton">Gray</a>
+			<br>
+			<a href="#" class="redButton">Red</a>
+			<br>
+			<a href="#" class="greenButton">Green</a>
+		</div>
+	</div>
+	<div id="animations">
+		<div class="toolbar">
+			<h1>Animations</h1>
+			<a class="back" href="#">Home</a>
+		</div>
+		<div class="scroll">
+			<h2>Most Popular</h2>
+			<ul class="rounded">
+				<li><a href="#animdemo">Slide</a></li>
+				<li><a href="#animdemo" class="slideup">Slide Up</a></li>
+				<li><a href="#animdemo" class="dissolve">Dissolve</a></li>
+				<li><a href="#animdemo" class="pop">Pop</a></li>
+			</ul>
+			<h2>3d Transitions</h2>
+			<ul class="rounded">
+				<li><a href="#animdemo" class="flipright">Flip right</a></li>
+				<li><a href="#animdemo" class="flipleft">Flip left</a></li>
+				<li><a href="#animdemo" class="cube">Cube</a></li>
+				<li><a href="#animdemo" class="swap">Swap</a></li>
+			</ul>
+		</div>
+		<div class="info">
+			Custom animations are also <a target="_blank" href="http://code.google.com/p/jqtouch/wiki/Animations">easy to write</a>. <br>View the source in <code>demos/customanimation</code> to see how.
+		</div>
+	</div>
+	<div id="animdemo">
+		<div style="font-size: 1.5em; text-align: center; margin: 160px 0 90px; font-family: Marker felt;">
+			Pretty smooth, eh?			
+		</div>
+		<a style="margin-bottom: 120px;color:rgba(0,0,0,.9)" href="#" class="whiteButton goback">Go back</a>
 	</div>
 </div>
 </body>

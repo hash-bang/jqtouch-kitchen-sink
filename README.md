@@ -73,3 +73,4 @@ TODO
 * Embedded video support
 * Better picturenav swiping support
 * Gallery support - possibly like icons but with thumbnailing
+* Ability to update the popout select boxes dynamicly rather than having the full generation done at page load
