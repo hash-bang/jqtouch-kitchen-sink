@@ -5,6 +5,16 @@ A collection of useful styles and scripts for use in jQTouch.
 See the index.html page for examples.
 
 
+Features
+========
+jQTouch-Kitchen-Sink, as the name suggests, provides a whole bucket load of new features on top of jQTouch.
+
+* __Navbar__ - A bottom-of-the-screen icon bar that doesnt suck! Also the ability to override the navbar on individual pages
+* __Popouts__ - All <SELECT> boxes can be replaced with a sub-page where the user can properly select the option instead of using a regular HTML select box
+* __Prompt to install to homescreen__ - If the viewing device is an iPhone its possible to redirect to a prompt screen to ask your users to install the app to the home screen
+* __Styles__ - Lots and lots of new page styles. See the demo for examples
+
+
 API reference
 =============
 
