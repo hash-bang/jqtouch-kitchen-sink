@@ -52,10 +52,11 @@ $(($.kitchensink.popout ? 'SELECT' : 'SELECT[data-popout]')).each(function(index
 		list.append(box);
 	});
 
-	i.replaceWith('<a href="#popout-' + id + '">' + title + '<input type="hidden" id="' + id + '" value="' + i.val() + '"/></a>');
+	i.replaceWith('<a href="#popout-' + id + '"><span>' + title + '</span><input type="hidden" id="' + id + '" value="' + i.val() + '"/></a>');
 	list.on('click', 'a', function() {
-		$('#jqt div#' + thispage + ' INPUT#' + id).val($(this).attr('rel'));
-		console.log('SET VAL ' + $(this).attr('rel'));
+		var input = $('#jqt div#' + thispage + ' INPUT#' + id)
+		input.val($(this).attr('rel'));
+		input.siblings('SPAN').text($(this).text());
 		jQT.goBack('#' + thispage);
 	});
 
@@ -130,7 +131,6 @@ $('#jqt > div').bind('pageAnimationEnd', function(e, info) { // Install page cha
 			} else if (navbarshow == 'show') {
 				$.kitchensink.navbar.show();
 			}
-			console.log('Add padding to ' + $(this).attr('id'));
 			$(this).addClass('navbar-padding');
 		}
 	}
