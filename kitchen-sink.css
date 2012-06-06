@@ -139,6 +139,28 @@ pre, .code {
 	margin: 0 20px 10px 10px;
 }
 /* }}} */
+/* Title style - Simple titles to list element {{{ */
+/* e.g. <ul class="rounded"><li data-title="Title Beside">Text</li><li data-above-title="Title Above">Text</li></ul> */
+li.title {
+
+}
+
+li .title-title {
+	display: inline-block;
+	color: black;
+	width: 40%;
+}
+
+li .above-title-title {
+	display: block;
+	color: black;
+}
+
+li .title-text, li .above-title-text {
+	display: inline-block;
+	font-weight: normal;
+}
+/* }}} */
 /* Picturenav - Swipe-based picture navigation. NOTE: Requires js/picturenav.js {{{ */
 /* e.g. <ul class="picturenav"><li><img src="/img/1.jpg"/></li><li><img src="/img/2.jpg"/></li><li><img src="/img/3.jpg"/></li><li><img src="/img/4.jpg"/></li></ul> */
 .picturenav {

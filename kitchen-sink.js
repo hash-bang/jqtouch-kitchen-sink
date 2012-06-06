@@ -77,9 +77,22 @@ $('#jqt .icons > li[data-icon]').each(function() {
 });
 // }}}
 // Articles {{{
+// No JS needed
 // }}}
 // Post {{{
 // No JS needed
+// }}}
+// Title {{{
+$('li[data-title]').each(function() {
+	$(this).addClass('title');
+	var inner = $(this).children('A').length ? $(this).children('A').first() : $(this);
+	inner.html('<div class="title-title">' + $(this).data('title') + '</div><div class="title-text">' + inner.html() + '</div>')
+});
+$('li[data-above-title]').each(function() {
+	$(this).addClass('above-title');
+	var inner = $(this).children('A').length ? $(this).children('A').first() : $(this);
+	inner.html('<div class="above-title-title">' + $(this).data('above-title') + '</div><div class="above-title-text">' + inner.html() + '</div>')
+});
 // }}}
 // Picturenav {{{
 $('.picturenav').bind('swipe', function(e, d) {
