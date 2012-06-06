@@ -4,6 +4,8 @@ A collection of useful styles and scripts for use in jQTouch.
 
 See the index.html page for examples.
 
+Demo site: http://hash-bang.net/demos/kitchensink
+
 
 Features
 ========
