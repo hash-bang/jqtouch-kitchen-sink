@@ -24,6 +24,11 @@
 	margin: 0 auto;
 	display: block;
 	padding: 10px;
+	text-align: center;
+}
+/* Padded */
+.padded {
+	padding: 10px !important;
 }
 /* Paste raw code - e.g. <div class="code">print "Hello World";</div> OR <pre>print "Hello World";</pre> */
 pre, .code {
