@@ -164,6 +164,7 @@ li .above-title-title {
 li .title-text, li .above-title-text {
 	display: inline-block;
 	font-weight: normal;
+	width: 100%;
 }
 /* }}} */
 /* Picturenav - Swipe-based picture navigation. NOTE: Requires js/picturenav.js {{{ */
