@@ -2,6 +2,16 @@
 /* Author: Matt Carter <m@ttcarter.com> */
 /* Source: https://github.com/hash-bang/jqtouch-kitchen-sink */
 
+/* jQTouch fixes {{{ */
+/* Fix the title being cropped badly on large displays */
+#jqt .toolbar > h1 {
+	position: relative;
+	left: auto;
+	bottom: 0px;
+	width: auto;
+	margin: 1px auto;
+}
+/* }}} */
 /* CSS options - you may wish to tweak these {{{ */
 .navbar, .global-navbar { /* For both types of navbar... */
 	height: 64px; /* The actual height of the navbar */
